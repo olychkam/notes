@@ -1,6 +1,7 @@
 {
   "name": "my-test",
   "version": "0.1.0",
+  "homepage": "https://olychkam.github.io/notes",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.12.3",
@@ -42,8 +43,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "json-server": "json-server --watch public/notes.json --port 3000",
-    "dev": "concurrently \"npm start\" \"npm run json-server\""
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
