@@ -1,0 +1,27 @@
+.tag{
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  margin: 2px;
+  width: min-content;
+  color: white;
+  background-color: #2a2a4e;
+  .tagBtn{
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: #ea5252;
+    min-width:20px;
+    &:hover {
+      background-color: #a32222;
+    }
+    &:disabled {
+      background-color: #e25353;
+      color: #f66262;
+    }
+  }
+}
