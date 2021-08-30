@@ -12,17 +12,13 @@ const axiosInstance = axios.create(defaultOptions);
 
 export const notesAPI = {
     getNotes() {
-        return axiosInstance.get<NotesType[]>('/notes.json')
-            .then(res => res)
-    },
-    addNotes(newNote: NotesType) {
-        return axiosInstance.post<ResponseType>('/notes.json', newNote)
+        return axiosInstance.get<NotesType[]>('http://localhost:3001/notes.json')
             .then(res => res)
     }
 }
 export const tagsAPI = {
     getTags() {
-        return axiosInstance.get<TagType[]>(`/notes.json`)
+        return axiosInstance.get<TagType[]>(`http://localhost:3001/notes.json`)
             .then(res => res)
     }
 }
