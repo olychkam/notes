@@ -30,20 +30,12 @@ function App() {
         //setNotes([newNoteObj, ...notes]);
     }
 
-    /*const addNote = (title: string) => {
-        dispatch(addNoteTC(title))
-    }*/
     useEffect(() => {
         dispatch(getNotesListTC())
         dispatch(getTagsListTC())
 
     }, [])
 
-    /*    useEffect(() => {
-                axios.get('http://localhost:3000/notes.json').then(({data})=>{
-                    dispatch(setNotesAC(data.notes))
-                })
-            }, [])*/
 
     const mappedNotes = useCallback(() => {
         return notesArr && notesArr.map((note, index) => {
