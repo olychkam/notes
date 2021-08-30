@@ -19,3 +19,6 @@
 .env.production.local
 
 
+
+# Local Netlify folder
+.netlify
