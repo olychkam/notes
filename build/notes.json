@@ -1,0 +1,46 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "title": "Films",
+      "textNote": "One of my favorite favorite things to do is to watch movies."
+    },
+    {
+      "id": "2",
+      "title": "Multi",
+      "textNote": " I’ve been fond of cartoons from the very childhood and I still like watching some of them."
+    },
+    {
+      "id": "3",
+      "title": "IT",
+      "textNote": "“To iterate is human, to recurse divine.”"
+    }
+  ],
+  "tags": [
+    {
+      "id": "1",
+      "title": "#recurse",
+      "noteId": "3"
+    },
+    {
+      "id": "2",
+      "title": "#cartoons",
+      "noteId": "2"
+    },
+    {
+      "id": "3",
+      "title": "#movies",
+      "noteId": "1"
+    },
+    {
+      "id": "4",
+      "title": "#is",
+      "noteId": "3"
+    },
+    {
+      "id": "5",
+      "title": "#is",
+      "noteId": "1"
+    }
+  ]
+}
