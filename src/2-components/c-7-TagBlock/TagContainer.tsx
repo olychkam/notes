@@ -30,7 +30,7 @@ export const TagContainer = (props: PropsTagContainerType) => {
                                                       tag={tag}
                                                       editMode={props.editMode}/>
         )
-    }, [props.tag])
+    }, [])
     return (
         <div className={s.container}>
             {mappedTags()}

@@ -1,11 +1,10 @@
-import React, {ChangeEvent, useCallback, useState} from "react";
+import React, {useState} from "react";
 import {Button} from "../c-5-Button/Button";
 import s from "./NotesField.module.scss";
 import {Input} from "../c-6-Input/Input";
-import {AddTag} from "../c-7-TagBlock/AddTag/AddTag";
-import {TagContainer} from "../c-7-TagBlock/TagContainer";
+
 import {useDispatch} from "react-redux";
-import {addNotesAC, getNotesListTC, NotesType, updateNoteAC} from "../../3-redux/notes-reducer";
+import {NotesType} from "../../3-redux/notes-reducer";
 import {v1} from "uuid";
 import {addTagAC, TagType} from "../../3-redux/tag-reducer";
 

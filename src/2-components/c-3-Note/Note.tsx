@@ -1,5 +1,4 @@
 import React, {useCallback, useState} from 'react';
-import {TextField} from '@material-ui/core';
 import s from './Note.module.scss';
 import {NotesField} from "../c-4-NotesField/NotesField";
 import {Button} from "../c-5-Button/Button";
@@ -37,7 +36,7 @@ export const Note = (props: PropsType) => {
 
     const deleteNote = useCallback(() => {
         dispatch(deleteNoteAC(props.note.id))
-    }, [props.note.id])
+    }, [])
     return (
         <div className={s.note}>
             <div className={s.headerNote}>

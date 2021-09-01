@@ -4,15 +4,13 @@ import {Search} from "../2-components/c-1-Search/Search";
 import {AddNotes} from "../2-components/c-2-AddNotes/AddNotes";
 import {Note} from "../2-components/c-3-Note/Note";
 import {useDispatch, useSelector} from "react-redux";
-import {addNotesAC, getNotesListTC, NotesType, setNodesFilter, setNotesAC} from "../3-redux/notes-reducer";
-import axios from "axios";
+import {addNotesAC, getNotesListTC, NotesType, setNodesFilter} from "../3-redux/notes-reducer";
 import {AppStateType} from "../3-redux/store";
 import {v1} from "uuid";
 import {getTagsListTC} from "../3-redux/tag-reducer";
 
 function App() {
     const dispatch = useDispatch()
-    const [notes, setNotes] = useState<Array<NotesType>>([])
     const notesArr = useSelector((state: AppStateType) => state.notes)
     const tagsArr=useSelector((state: AppStateType) => state.tags)
     /* const addNote = useCallback((title: string) => {
@@ -43,7 +41,7 @@ function App() {
                          note={note}
             />
         })
-    }, [notesArr])
+    }, [])
 
     const findNote = (value: string) => {
         // @ts-ignore

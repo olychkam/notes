@@ -1,7 +1,6 @@
 import {ThunkDispatch} from "redux-thunk";
 import {AppStateType} from "./store";
 import {tagsAPI} from "../1-api/api";
-import {v1} from "uuid";
 
 export type TagType = {
     id: string

@@ -3,7 +3,7 @@ import s from '../../4-app/App.module.scss'
 import {Button} from '@material-ui/core';
 import {TextField} from '@material-ui/core';
 import {useDispatch} from "react-redux";
-import {getNotesListTC, setNotesAC} from "../../3-redux/notes-reducer";
+import {getNotesListTC} from "../../3-redux/notes-reducer";
 
 type SearchPropsType = {
     findNote: (value: string) => void
@@ -29,7 +29,7 @@ export const Search = (props: SearchPropsType) => {
 
     const showAll = useCallback(() => {
         dispatch(getNotesListTC())
-    }, [dispatch])
+    }, [])
 
     return (
         <div className={s.search}>

@@ -1,7 +1,6 @@
 import React from "react";
 import s from "./Input.module.scss";
 import {HighlightWithinTextarea} from "react-highlight-within-textarea";
-import {TextareaAutosize} from "@material-ui/core";
 
 
 export const Input = (props) => {
