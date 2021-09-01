@@ -25,11 +25,11 @@ export const Search = (props: SearchPropsType) => {
         } else {
             console.log('Title is required')
         }
-    }, [value, props.findNote])
+    }, [])
 
     const showAll = useCallback(() => {
         dispatch(getNotesListTC())
-    }, [])
+    }, [dispatch])
 
     return (
         <div className={s.search}>
