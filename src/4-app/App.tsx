@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useCallback, useEffect} from 'react';
 import s from './App.module.scss';
 import {Search} from "../2-components/c-1-Search/Search";
 import {AddNotes} from "../2-components/c-2-AddNotes/AddNotes";
@@ -36,7 +36,7 @@ export const App: React.FC = () => {
 
 
     const mappedNotes = useCallback(() => {
-        return notesArr && notesArr.map((note, index) => {
+        return notesArr && notesArr.map((note) => {
             return <Note key={note.id}
                          note={note}
             />
