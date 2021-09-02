@@ -14,7 +14,7 @@ export const Tag: React.FC<PropsType> = ({tag, editMode}) => {
     const dispatch = useDispatch()
     const deleteNote = useCallback(() => {
         dispatch(deleteTagAC(tag.id))
-    }, [tag])
+    }, [dispatch,tag])
     return (
         <div className={s.tag}>
             {tag.title}

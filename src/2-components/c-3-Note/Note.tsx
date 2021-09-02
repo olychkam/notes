@@ -36,7 +36,7 @@ export const Note: React.FC<PropsType> = ({note}) => {
 
     const deleteNote = useCallback(() => {
         dispatch(deleteNoteAC(note.id))
-    }, [note.id])
+    }, [dispatch,note.id])
     return (
         <div className={s.note}>
             <div className={s.headerNote}>
