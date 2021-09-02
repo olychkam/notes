@@ -10,15 +10,15 @@ export type PropsType = {
     editMode:boolean
 }
 
-export const Tag = (props: PropsType) => {
+export const Tag: React.FC<PropsType> = ({tag, editMode}) => {
     const dispatch = useDispatch()
     const deleteNote = useCallback(() => {
-        dispatch(deleteTagAC(props.tag.id))
-    }, [])
+        dispatch(deleteTagAC(tag.id))
+    }, [tag])
     return (
         <div className={s.tag}>
-            {props.tag.title}
-            {props.editMode &&  <Button className={s.tagBtn} onClick={deleteNote}>X</Button>}
+            {tag.title}
+            {editMode &&  <Button className={s.tagBtn} onClick={deleteNote}>X</Button>}
         </div>
     )
 }

@@ -12,11 +12,11 @@ export type PropsType = {
     note: NotesType
 }
 
-export const Note = (props: PropsType) => {
+export const Note: React.FC<PropsType> = ({note}) => {
     const dispatch = useDispatch()
     const [editMode, setEditMode] = useState<boolean>(false)
     // @ts-ignore
-    const tags = useSelector<AppStateType, TagType[]>(state => state.tags.filter(t => t.noteId === props.note.id))
+    const tags = useSelector<AppStateType, TagType[]>(state => state.tags.filter(t => t.noteId === note.id))
 
     function updateNotes(note: NotesType, areaText: string) {
         const noteText = areaText.replace(/#/g, '')
@@ -35,20 +35,20 @@ export const Note = (props: PropsType) => {
     }
 
     const deleteNote = useCallback(() => {
-        dispatch(deleteNoteAC(props.note.id))
-    }, [])
+        dispatch(deleteNoteAC(note.id))
+    }, [note.id])
     return (
         <div className={s.note}>
             <div className={s.headerNote}>
                 <Button onClick={deleteNote}>X</Button>
             </div>
             <div className={s.title}>
-                <h1>{props.note.title}</h1>
+                <h1>{note.title}</h1>
             </div>
-            <NotesField notes={props.note} editMode={editMode}
+            <NotesField notes={note} editMode={editMode}
                         setEditMode={setEditMode} updateNotes={updateNotes}
                         tags={tags}/>
-            <TagContainer tag={tags} noteId={props.note.id} editMode={editMode}/>
+            <TagContainer tag={tags} noteId={note.id} editMode={editMode}/>
         </div>
     )
 }

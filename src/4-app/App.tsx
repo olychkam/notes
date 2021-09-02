@@ -9,7 +9,7 @@ import {AppStateType} from "../3-redux/store";
 import {v1} from "uuid";
 import {getTagsListTC} from "../3-redux/tag-reducer";
 
-function App() {
+export const App: React.FC = () => {
     const dispatch = useDispatch()
     const notesArr = useSelector((state: AppStateType) => state.notes)
     const tagsArr=useSelector((state: AppStateType) => state.tags)
@@ -32,7 +32,7 @@ function App() {
         dispatch(getNotesListTC())
         dispatch(getTagsListTC())
 
-    }, [])
+    }, [dispatch])
 
 
     const mappedNotes = useCallback(() => {
@@ -41,7 +41,7 @@ function App() {
                          note={note}
             />
         })
-    }, [])
+    }, [notesArr])
 
     const findNote = (value: string) => {
         // @ts-ignore

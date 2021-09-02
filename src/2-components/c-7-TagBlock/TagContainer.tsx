@@ -12,7 +12,7 @@ type PropsTagContainerType = {
     editMode: boolean
 }
 
-export const TagContainer = (props: PropsTagContainerType) => {
+export const TagContainer: React.FC<PropsTagContainerType> = ({tag, editMode,noteId,children}) => {
     const dispatch = useDispatch()
      const addTag = (title: string, noteId: string) => {
         let newTag = v1()
@@ -26,15 +26,15 @@ export const TagContainer = (props: PropsTagContainerType) => {
     }
 
     const mappedTags = useCallback(() => {
-        return props.tag && props.tag.map(tag => <Tag key={tag.id}
+        return tag && tag.map(tag => <Tag key={tag.id}
                                                       tag={tag}
-                                                      editMode={props.editMode}/>
+                                                      editMode={editMode}/>
         )
-    }, [])
+    }, [tag,editMode])
     return (
         <div className={s.container}>
             {mappedTags()}
-            <AddTag addTag={addTag} noteId={props.noteId}/>
+            <AddTag addTag={addTag} noteId={noteId}/>
 
         </div>
     )
