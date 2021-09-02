@@ -9,7 +9,7 @@ type SearchPropsType = {
     findNote: (value: string) => void
 }
 
-export const Search = (props: SearchPropsType) => {
+export const Search: React.FC<SearchPropsType> = ({findNote}) => {
     const dispatch = useDispatch()
     const [value, setValue] = useState<string>('')
 
@@ -19,13 +19,13 @@ export const Search = (props: SearchPropsType) => {
 
     const onSendRequest = useCallback(() => {
         if (value.trim() !== '') {
-            props.findNote(`#${value}`)
+            findNote(`#${value}`)
             setValue('')
             console.log('VSE OK')
         } else {
             console.log('Title is required')
         }
-    }, [value,props.findNote])
+    }, [value,findNote])
 
     const showAll = useCallback(() => {
         dispatch(getNotesListTC())
