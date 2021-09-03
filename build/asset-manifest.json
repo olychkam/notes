@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/notes/static/css/main.85b6a72d.chunk.css",
+    "main.js": "/notes/static/js/main.655aa20b.chunk.js",
+    "main.js.map": "/notes/static/js/main.655aa20b.chunk.js.map",
+    "runtime-main.js": "/notes/static/js/runtime-main.112994eb.js",
+    "runtime-main.js.map": "/notes/static/js/runtime-main.112994eb.js.map",
+    "static/js/2.f902733a.chunk.js": "/notes/static/js/2.f902733a.chunk.js",
+    "static/js/2.f902733a.chunk.js.map": "/notes/static/js/2.f902733a.chunk.js.map",
+    "static/js/3.aa2c0e0f.chunk.js": "/notes/static/js/3.aa2c0e0f.chunk.js",
+    "static/js/3.aa2c0e0f.chunk.js.map": "/notes/static/js/3.aa2c0e0f.chunk.js.map",
+    "index.html": "/notes/index.html",
+    "static/css/main.85b6a72d.chunk.css.map": "/notes/static/css/main.85b6a72d.chunk.css.map",
+    "static/js/2.f902733a.chunk.js.LICENSE.txt": "/notes/static/js/2.f902733a.chunk.js.LICENSE.txt",
+    "static/media/App.module.scss": "/notes/static/media/1610510193_15-p-fon-dlya-maketa-29.9d7252ac.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.112994eb.js",
+    "static/js/2.f902733a.chunk.js",
+    "static/css/main.85b6a72d.chunk.css",
+    "static/js/main.655aa20b.chunk.js"
+  ]
+}
